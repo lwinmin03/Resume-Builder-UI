@@ -1,13 +1,28 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "../components/common/Navbar"
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/common/Navbar";
+import Footer from "../components/common/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="w-screen h-screen bg-white p-2 overflow-hidden">
-        <Navbar/>
-        <Outlet/>
-    </div>
-  )
-}
+    <div className="min-h-screen w-full flex flex-col bg-white">
 
-export default MainLayout
+      {/* Navbar - fixed at top */}
+      <header className="sticky top-0 z-50 shadow-sm bg-white">
+        <Navbar />
+      </header>
+
+      {/* Main content area */}
+      <main className="flex-1 overflow-y-auto px-4 py-3">
+        <Outlet />
+      </main>
+
+      {/* Footer */}
+      <footer className="mt-auto bg-gray-50 border-t">
+        <Footer />
+      </footer>
+
+    </div>
+  );
+};
+
+export default MainLayout;
