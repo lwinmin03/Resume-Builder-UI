@@ -1,41 +1,31 @@
-import { NavLink } from "react-router-dom"
-import { navs } from "../../constants/navItem"
-import { getCurrentRoute } from "../../utils/getCurrentRoute"
-
+import { NavLink } from "react-router-dom";
+import { navs } from "../../constants/navItem";
+import { getCurrentRoute } from "../../utils/getCurrentRoute";
+import { LOGO } from "../../assets";
 
 const Navbar = () => {
+  const path: string = getCurrentRoute();
 
-
-  const path:string=getCurrentRoute();
-
-
-  console.log(path);
-  
   return (
-    <nav className="w-full rounded-md shadow-2xs bg-white shadow-gray-100  h-16 flex gap-3 items-center justify-between">
-        <div className="size-12 font-bold flex text-white justify-center items-center p-2 rounded-full bg-gray-900">
-          RB
-        </div>
-        {/* <div className="flex flex-col">
-          <h4 className="text-lg font-bold">Resume Builder</h4>
-            <div className="text-sm">
-                Professional templates for your career
-            </div>
-        </div> */}
+    <nav className="w-full px-2  py-1 rounded-md shadow-2xs bg-white shadow-gray-100  h-20 flex gap-3 items-center justify-between">
+      <div className="w-24  h-12 cursor-pointer bg-gray-800 font-bold flex text-white justify-center items-center px-2 py-1 rounded-sm">
+        <img className=" text-4xl" src={LOGO} />
+      </div>
+     
 
-
-
-
-        <div className="flex gap-3 items-center">
-          {navs.map((link)=>(
-              <NavLink to={link.path} key={link.id} className={`${path===link.path && "bg-gray-800 text white"}`}>
-                  {link.label}
-              </NavLink>
-          ))}
-        </div>
-       
+      <div className="flex gap-3 items-center">
+        {navs.map((link) => (
+          <NavLink
+            to={link.path}
+            key={link.id}
+            className={`${path === link.path && "bg-gray-800 text white"}`}
+          >
+            {link.label}
+          </NavLink>
+        ))}
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

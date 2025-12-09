@@ -4,9 +4,6 @@ import cards from "../../constants/card"
 
 const TemplateSection = () => {
 
-
-    console.log(cards);
-    
   return (
     <div className="grid grid-col-4 gap-2">
 

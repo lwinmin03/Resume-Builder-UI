@@ -1,8 +1,18 @@
-import TemplateSection from "../../components/Landing/TemplateSection";
+import { useNavigate } from "react-router-dom";
+
 
 const Landing = () => {
+
+const navigate=useNavigate();
+
+const handleRoute=():void=>{
+  navigate("/classic")
+
+}
+
   return (
-    <div className=" w-full h-full overflow-hidden  ">
+    <div className=" w-full h-full overflow-hidden flex
+     justify-center items-center ">
       <div className="text-center mx-auto  p-2 h-4/6 w-9/12 flex flex-col gap-3 justify-center items-center antialiased">
         <h2 className="font-bold text-gray-800 text-7xl">
           Find Your Perfect Template
@@ -14,7 +24,7 @@ const Landing = () => {
           layout later.
         </p>
 
-        <button className=" mt-1 cursor-pointer bg-gray-900 text-white p-2.5 rounded-md">Create Resume</button>
+        <button onClick={handleRoute} className=" mt-1 cursor-pointer bg-gray-900 text-white p-2.5 rounded-md">Create Resume</button>
       </div>
 
       {/* <TemplateSection/> */}

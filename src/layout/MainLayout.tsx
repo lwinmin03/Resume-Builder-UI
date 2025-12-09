@@ -4,7 +4,7 @@ import Footer from "../components/common/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col bg-white">
+    <div className="h-screen w-full flex flex-col bg-white">
 
       {/* Navbar - fixed at top */}
       <header className="sticky top-0 z-50 shadow-sm bg-white">
@@ -12,14 +12,14 @@ const MainLayout = () => {
       </header>
 
       {/* Main content area */}
-      <main className="flex-1 overflow-y-auto px-4 py-3">
+      <main className="flex-1 h-full overflow-y-auto px-4 py-3">
         <Outlet />
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto bg-gray-50 border-t">
+      {/* <footer className="mt-auto bg-gray-50 border-t">
         <Footer />
-      </footer>
+      </footer> */}
 
     </div>
   );
