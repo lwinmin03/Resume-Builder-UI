@@ -1,5 +1,4 @@
-import React from "react";
-import { ArrowUpLeftSquare, ArrowUpRightFromSquare } from "lucide-react";
+import { ArrowUpRightFromSquare } from "lucide-react";
 import type { JSX } from "react/jsx-runtime";
 
 const FooterButton = (): JSX.Element => {

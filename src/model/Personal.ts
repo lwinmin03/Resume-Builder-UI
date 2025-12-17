@@ -5,3 +5,5 @@ export interface Personal{
     location:string,
     summary?:string
 }
+
+

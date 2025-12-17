@@ -9,7 +9,8 @@ const Navbar = () => {
   return (
     <nav className="w-full px-2  py-1 rounded-md shadow-2xs bg-white shadow-gray-100  h-20 flex gap-3 items-center justify-between">
       <div className="w-24  h-12 cursor-pointer bg-gray-800 font-bold flex text-white justify-center items-center px-2 py-1 rounded-sm">
-        <img className=" text-4xl" src={LOGO} />
+        <img  className=" text-4xl" src={LOGO} />
+          
       </div>
      
 
