@@ -24,7 +24,7 @@ const TextInput = ({
         ${className}
       `}>
       <input
-        className="outline-none border-none px-2 py-1"
+        className="outline-none border-none w-full   px-2 py-1"
         type={type}
         value={value}
         placeholder={placeholder}
